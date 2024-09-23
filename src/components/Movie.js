@@ -1,15 +1,18 @@
 import PropTypes from "prop-types";
-export default function Movie({ title, genres, summary, coverImg }) {
+import { Link } from "react-router-dom";
+export default function Movie({ id, title, genres, summary, coverImg }) {
   return (
     <li>
-      <div>
-        <h4>{title}</h4>
-        <img src={coverImg} alt={title} />
-        {summary ? <p>{summary}</p> : null}
-        {genres.map((x) => (
-          <p>{x}</p>
-        ))}
-      </div>
+      <Link to={`/movie/${id}`}>
+        <div>
+          <h4>{title}</h4>
+          <img src={coverImg} alt={title} />
+          {summary ? <p>{summary}</p> : null}
+          {genres.map((x) => (
+            <p>{x}</p>
+          ))}
+        </div>
+      </Link>
     </li>
   );
 }

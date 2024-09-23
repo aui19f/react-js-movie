@@ -23,6 +23,7 @@ export default function Movies() {
         {movies.map((movie) => (
           <Movie
             key={movie.key}
+            id={movie.id}
             title={movie.title}
             summary={movie.summary}
             genres={movie.genres}
