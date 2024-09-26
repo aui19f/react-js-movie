@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.movieList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.header {
+  border-bottom: 2px solid black;
+  margin-bottom: 8px;
+  width: 100%;
+  max-width: 990px;
+  padding: 16px 0;
+}
+
+.list {
+  max-width: 990px;
+  width: 100%;
+}
+.list ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 4fr));
+  width: 100%;
+  gap: 8px;
+}

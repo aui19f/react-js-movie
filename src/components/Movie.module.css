@@ -1,0 +1,50 @@
+a {
+  text-decoration: none;
+}
+.numbers {
+  background-color: red;
+  padding: 8px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.cover img {
+  width: 100%;
+}
+.txt {
+  margin: 8px 0;
+}
+
+.titleName {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.genres {
+  margin-bottom: 6px;
+}
+.genres span {
+  font-size: 75%;
+  padding: 2px;
+  margin: 2px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: gray;
+}
+
+.smallTxt {
+  display: flex;
+  align-items: center;
+  font-size: 75%;
+  color: gray;
+}
+
+.smallTxt p:first-child {
+  margin-right: 4px;
+}
