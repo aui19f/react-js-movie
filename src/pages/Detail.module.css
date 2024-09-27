@@ -36,8 +36,24 @@
 .listData {
   flex: 1;
 }
+
 .listData p {
   margin-bottom: 6px;
+}
+
+.listData > div {
+  margin: 8px 0;
+}
+.listData > div > div {
+  margin-left: 8px;
+}
+.listData span {
+  display: inline-block;
+  border: 1px solid lightgray;
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 80%;
+  margin: 2px;
 }
 
 .buttons button {
@@ -48,4 +64,8 @@
   border-radius: 8px;
   font-weight: bold;
   font-size: 110%;
+}
+
+.noneImage {
+  width: 300px;
 }
