@@ -1,8 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 import Movie from "./components/Movie";
 import Detail from "./pages/Detail";
 import ErrorPage from "./pages/ErrorPage";
 import Movies from "./pages/Movies";
+import App from "./App";
 
 const router = createBrowserRouter(
   [

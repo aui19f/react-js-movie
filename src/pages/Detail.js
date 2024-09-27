@@ -43,7 +43,7 @@ export default function Detail() {
                 <p>런타임: {movieData.runtime}</p>
               </div>
 
-              <div className="buttons">
+              <div className={styles.buttons}>
                 <button>예매하기</button>
               </div>
             </div>

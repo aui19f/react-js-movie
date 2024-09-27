@@ -33,6 +33,9 @@
   margin-bottom: 16px;
 }
 
+.listData {
+  flex: 1;
+}
 .listData p {
   margin-bottom: 6px;
 }
