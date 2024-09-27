@@ -1,0 +1,26 @@
+.errorPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 240px;
+}
+
+.errorPage h1 {
+  font-size: 8rem;
+}
+
+.errorPage p {
+  margin: 40px 0;
+}
+
+.errorPage button {
+  border: 1px solid #fb4357;
+  color: #fb4357;
+  background-color: transparent;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
