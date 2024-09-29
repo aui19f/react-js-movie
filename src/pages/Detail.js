@@ -3,26 +3,35 @@ import { useParams } from "react-router-dom";
 import styles from "./Detail.module.css";
 import Loading from "../components/Loading";
 import noneImg from "../images/image.png";
+import { gql, useQuery } from "@apollo/client";
 
+const GET_DATA = gql`
+  query getMovie($id: String) {
+    movie(id: $id) {
+      title
+      title_english
+      summary
+      genres
+      medium_cover_image
+      year
+      rating
+      runtime
+    }
+  }
+`;
 export default function Detail() {
   let { id } = useParams();
-  const [movieData, setMovieData] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const movieDetail = async () => {
-    const responseData = await (
-      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
-    ).json();
-    setMovieData(responseData.data.movie);
-    console.log(responseData.data.movie);
-    setIsLoading(false);
-  };
-  useEffect(() => {
-    movieDetail();
-  }, []);
+
+  const { loading, data, error } = useQuery(GET_DATA, {
+    variables: {
+      id,
+    },
+  });
+  const { movie: movieData = {} } = data || {};
 
   return (
     <>
-      {isLoading ? (
+      {loading ? (
         <Loading />
       ) : (
         <div className={styles.moviedetail}>
@@ -44,7 +53,6 @@ export default function Detail() {
                 <p>개봉: {movieData.year}</p>
                 <div>
                   <p>장르: </p>
-
                   <div>
                     {movieData.genres.map((genre) => (
                       <span>{genre} </span>
